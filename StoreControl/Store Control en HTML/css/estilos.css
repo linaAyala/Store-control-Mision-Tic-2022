@@ -1,0 +1,147 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Css del menu de navegacion */
+#menu{
+    margin-left: 50px;
+    
+}
+nav li{
+    padding: 0px 10px;
+    font-size: 20px;
+}
+#m{
+    margin-left: 50px;
+}
+
+nav{
+    background-color: rgb(248, 248, 248);
+}
+#l{
+    margin-left: 20px;
+}
+
+#logo{
+    border-radius:150px;
+    border: 2px solid #666;
+    cursor: pointer;
+}
+
+/* Css del menu barra lateral */
+.list-group {
+     
+    margin:auto;
+    float:left;
+    padding-top:20px;
+   }
+   .lead {
+    
+    margin:auto;
+    left:0;
+    right:0;
+    padding-top:10%;
+   }
+   label{
+    font-size: 20px;
+   }
+   #lateral{
+       
+       margin-top: 60px;
+   }
+   
+
+
+
+
+
+
+
+/* Aquí puedes colocar tu codigo css de tu modulo */
+
+.main {
+    border: 1px solid lightgrey;
+}
+
+/* section > div {
+    border: 1px solid lightgrey;
+} */
+
+
+/* // X-Small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+/* #lateral {
+    visibility: hidden !important;
+} */
+
+@media (max-width: 575px) { 
+/* @media screen and (max-height: 450px) { */
+    #lateral {
+        display: none !important;
+    }
+ 
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+ }
+
+
+
+
+
+
+
+/* Css del footer o pie de pagina */
+   .copyrights{
+    margin-top: 660px;
+    
+    
+    }
+    
+    footer.container-fluid.text-center.foot {
+        background: #383838;
+        height: 315px;
+        
+    }
+    
+    .dark-line{
+    border-top: 1px solid #525252;
+    }
+    
+    .white-txt{
+    color: #FFF;
+    }
+    
+    
+    a.link {
+        padding: 0px 15px;
+    }
+    
+   
+    
+    .footimg{
+    width: 5rem;
+    }
+ 
