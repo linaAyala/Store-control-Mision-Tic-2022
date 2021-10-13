@@ -1,8 +1,9 @@
 <template>
 <!-- Barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a href="#"><img src="../assets/logo.png" width="72px" height="72px" id="logo" /></a>
-      <a id="l" class="navbar-brand">STORE CONTROL</a>
+      <img src="../assets/logo.png" alt="" id="logo"/>
+      <!-- <a href="#"><img src="../assets/logo.png" width="72px" height="72px" id="logo" /></a> -->
+      <!-- <a id="l" class="navbar-brand">STORE CONTROL</a> -->
       <button class="navbar-toggler"
         type="button"
         data-toggle="collapse"
@@ -153,5 +154,7 @@ nav{
     border-radius:150px;
     border: 2px solid #666;
     cursor: pointer;
+    width: 64px;
+    height: 64px;
 }
 </style>
