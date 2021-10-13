@@ -35,37 +35,12 @@
                       />
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-md-6">
-                      <a
-                        href="/recovery"
-                        class="
-                          list-group-item
-                          list-group-item-action
-                          list-group-item-light
-                        "
-                        ><i class="fa fa-at"></i>
-                        <span>Olvide mi contraseña</span></a
-                      >
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <div class="col-md-6">
-                      <form action="/landing">
-                        <button type="submit" class="btn btn-primary">
-                          Iniciar sesion
-                        </button>
-                      </form>
 
-                      <form action="/registro">
-                        <button
-                          type="button"
-                          class="btn btn-primary"
-                          @click="irRegistro()"
-                        >
-                          Registrarse
-                        </button>
-                      </form>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <button type="submit" class="btn btn-primary">
+                        Iniciar sesion
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -97,5 +72,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
