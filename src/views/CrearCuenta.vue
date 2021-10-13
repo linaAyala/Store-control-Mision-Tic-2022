@@ -1,6 +1,6 @@
 <template>
   <!-- Main -->
-  <main class="main d-flex justify-content-start" role="main" name="main">
+  <div class="main d-flex justify-content-start" role="main" name="main">
     <div class="container-fluid">
       <section id="main-section">
         <div class="row">
@@ -23,6 +23,7 @@
                       />
                     </div>
                   </div>
+
                   <div class="row mb-3">
                     <div class="col-md-6">
                       <label for="inputPassword4" class="form-label"
@@ -35,6 +36,15 @@
                       />
                     </div>
                   </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <button class="btn btn-primary" @click="irRegistro()">
+                        Registrarse
+                      </button>
+                    </div>
+                  </div>
+
                   <div class="row mb-3">
                     <div class="col-md-6">
                       <a
@@ -44,28 +54,9 @@
                           list-group-item-action
                           list-group-item-light
                         "
-                        ><i class="fa fa-at"></i>
-                        <span>Olvide mi contraseña</span></a
                       >
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <div class="col-md-6">
-                      <form action="/landing">
-                        <button type="submit" class="btn btn-primary">
-                          Iniciar sesion
-                        </button>
-                      </form>
-
-                      <form action="/registro">
-                        <button
-                          type="button"
-                          class="btn btn-primary"
-                          @click="irRegistro()"
-                        >
-                          Registrarse
-                        </button>
-                      </form>
+                        <span>Aceptar términos y condiciones</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -80,22 +71,19 @@
         </div>
       </section>
     </div>
-  </main>
+  </div>
   <!-- End Main -->
 </template>
 
 <script>
-import CrearCuenta from "./CrearCuenta.vue";
-import RecuperarCuenta from "./RecuperarCuenta.vue";
 export default {
   methods: {
-    irRegistro() {
-      this.$router.push("/registro");
+    cancelar() {
+      this.$router.push("/login");
     },
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

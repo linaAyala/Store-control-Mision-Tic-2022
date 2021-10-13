@@ -1,6 +1,6 @@
 <template>
-    <!-- Main -->
-    <main class="main d-flex justify-content-start" role="main" name="main">
+    <!-- Template -->
+    <div class="d-flex justify-content-start">
         <div class="container-fluid">
             <section id="main-section">
                 <div class="row">
@@ -14,7 +14,7 @@
 
                             <table class="table align-middle">
 
-                                <h1 class="display-4"> Stock </h1>
+                                <h1 class="display-4"> Agregar Productos </h1>
                                 <hr>
 
                                 <!--h1 id="registrar"> Registrar Productos </h1>-->
@@ -220,8 +220,8 @@
                 </div>
             </section>
         </div>
-    </main>
-    <!-- End Main -->
+    </div>
+    <!-- End Template -->
 
 </template>
 
