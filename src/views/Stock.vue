@@ -2,7 +2,7 @@
     <!-- Template -->
     <div class="d-flex justify-content-start">
         <div class="container-fluid">
-            <section id="main-section">
+            <section>
                 <div class="row">
                     <article class="col">
 
