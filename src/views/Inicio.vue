@@ -1,19 +1,34 @@
 <template>
-  <div>
-    <title>Store Control</title>
-    <div class="banner">
-      <img src="images/banner.jpg" alt="A banner image" />
-    </div>
 
-    <!-- fin encabezado del sitio -->
-    <!-- inicio contenido principal -->
-    <main>
-      <div>
-        <h1>Servicios</h1>
+
+    <title>Store Control</title>
+     <div class="row">
+        <div class="col-lg-12">
+          <img class="img-fluid" src="../assets/banner.jpg"  alt="Responsive image"/>
+            <!--img src="../assets/banner.jpg" alt="A banner image"-->
+        </div>
+     </div>
+
+  <!--     <div>
+        <div class="container">
+         <div class="row">
+           <div class="col"> -->
+      
+
+<section class="service-details">
+    <br>
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+         <div class="card">
+           <br>
+           <div class="card-body">
+            
+             <h1>Servicios</h1>
         <!-- inicio sección de servicios -->
-        <section id="services" class="services-section">
+       <!--  <section id="services" class="services-section"> -->
           <article class="services-info">
-            <img class="services-info__imagen" src="images/1.jpg" alt=" 1 " />
+            <img class="img-fluid" src="../assets/img/1.jpg" alt=" 1 " />
             <h2 class="services-info__title">Stock de productos</h2>
             <p class="services-info__text">
               Llamamos stocks o existencias de una empresa al conjunto de
@@ -22,8 +37,17 @@
               venta.
             </p>
           </article>
-          <article class="services-info">
-            <img class="services-info__imagen" src="images/2.jpg" alt=" 2 " />
+
+           </div>
+         </div>
+       </div>
+       <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+         <div class="card">
+           <br>
+             <div class="card-body">
+             
+  <article class="services-info">
+            <img class="img-fluid" src="../assets/img/2.jpg" alt=" 2 " />
             <h2 class="services-info__title">Pedidos de los productos</h2>
             <p class="services-info__text">
               Los tipos de pedidos son las diferentes formas de solicitud de
@@ -32,8 +56,17 @@
               que compran los productos que vende la empresa.
             </p>
           </article>
-          <article class="services-info">
-            <img class="services-info__imagen" src="images/3.jpg" alt=" 3 " />
+           </div>
+         </div>
+       <br>
+       </div>
+<div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+         <div class="card">
+           <br>
+             <div class="card-body">
+             
+ <article class="services-info">
+            <img class="img-fluid" src="../assets/img/3.jpg" alt=" 3 " />
             <h2 class="services-info__title">Ventas</h2>
             <p class="services-info__text">
               Ventas son las actividades realizadas para incentivar potenciales
@@ -42,10 +75,17 @@
               en el cual una parte es el vendedor y la otra el comprador.
             </p>
           </article>
-        </section>
-        <!-- fin sección de servicios -->
 
-        <h1>Informacion de servicios</h1>
+           </div>
+         </div>
+       <br>
+   </div>
+  </div>
+</div>
+</section>
+
+    <div class="col order-12">
+      <h1>Informacion de servicios</h1>
         <!-- inicio sección de noticias -->
 
         <div id="1">
@@ -74,8 +114,9 @@
             </li>
           </ul>
         </div>
-
-        <h1 class="services-info__title">Eventos</h1>
+    </div>
+    <div class="col order-1">
+      <h1 class="services-info__title">Eventos</h1>
         <p class="services-info__text">
           Organizar eventos que permitan obtener una mayor audiencia. Una
           plataforma de en la cual se da a conocer distintos eventos, los cuales
@@ -86,6 +127,11 @@
           venta de entradas hasta la visibilidad y la promoción.
         </p>
 
+    </div>
+ <!--  </div>
+</div>
+       -->
+        
         <div class="container">
           <div class="row mb-3">
             <div class="col">
@@ -115,13 +161,13 @@
             </div>
           </div>
         </div>
-
+<!-- 
         <section id="news" class="news-section">
           <article class="news-info">
-            <div class="news-header">
-              <img class="news-info__imagen" src="images/m1.jpg" alt="" />
+            <div class="news-header"> -->
+              <img class="news-info__imagen" src="../assets/img/m1.jpg" alt="m1" />
               <h2 class="news-info__title">Mision</h2>
-            </div>
+           <!--  </div> -->
             <p class="news-info__text">
               Nuestra misión es ofrecer un conjunto de aplicaciones para
               empresas fáciles de utilizar que forman una caja de herramientas
@@ -129,26 +175,26 @@
               acceso al software que necesitan para dirigir y expandir su
               negocio a millones de empresas.
             </p>
-          </article>
+          <!-- </article> -->
 
-          <article class="news-info">
-            <div class="news-header">
-              <img class="news-info__imagen" src="images/vi1.jpg" alt="" />
-              <h2 class="news-info__title">Vision</h2>
-            </div>
+        <!--   <article class="news-info">
+            <div class="news-header"> -->
+              <img class="news-info__imagen" src="../assets/img/vi1.jpg" alt="" />
+              <h2 class="Em">Vision</h2>
+           <!--  </div> -->
             <p class="news-info__text">
               Ser la empresa líder en el control de inventarios de los
               establecimientos, mediante la implementación de un software el
               cual permita conocer como se encuentra la empresa y buscar obtener
               mejores ingresos en la empresa.
             </p>
-          </article>
+        <!--   </article> -->
 
-          <article class="news-info">
-            <div class="news-header">
-              <img class="news-info__imagen" src="images/v1.jpg" alt="" />
+          <!-- article class="news-info">
+            <div class="news-header"> -->
+              <img class="news-info__imagen" src="../assets/img/v1.jpg" alt="" />
               <h2 class="news-info__title">Valores</h2>
-            </div>
+           <!--  </div> -->
             <div id="valores">
               <ul>
                 <li><a>Compromiso</a></li>
@@ -158,91 +204,24 @@
                 <li><a>Confianza</a></li>
               </ul>
             </div>
-          </article>
+       <!--    </article> -->
 
-          <article class="news-info">
-            <div class="news-header">
-              <img class="news-info__imagen" src="images/p1.png" alt="" />
+        <!--   <article class="news-info">
+            <div class="news-header"> -->
+              <img class="news-info__imagen" src="../assets/img/p1.png" alt="" />
               <h2 class="news-info__title">Politica de calidad</h2>
-            </div>
+           <!--  </div> -->
             <p class="news-info__text">
               Define planes de control de calidad que activarán comprobaciones
               de calidad en operaciones específicas de inventario (inspecciones
               finales y de entrega) o de operaciones de fabricación
               (inspecciones del proceso).
             </p>
-          </article>
-        </section>
+         <!--  </article> -->
+        <!-- </section> -->
 
         <!-- fin sección de noticias -->
-
-        <h2>Equipo</h2>
-        <!-- inicio sección de equipo -->
-        <section id="team" class="team-section">
-          <article class="team-info">
-            <img
-              class="team-info__imagen"
-              src="http://placeimg.com/100/200/people"
-              alt=""
-            />
-            <h2 class="team-info__title">Integrante 1</h2>
-            <p class="team-info__text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
-              quas voluptate magni repellat eligendi! Inventore voluptas
-              voluptates quia voluptatum expedita, ducimus delectus dolore eaque
-              maiores iusto modi eum aut corporis?
-            </p>
-          </article>
-
-          <article class="team-info">
-            <img
-              class="team-info__imagen"
-              src="http://placeimg.com/100/200/tech"
-              alt=""
-            />
-            <h2 class="team-info__title">Integrante 2</h2>
-            <p class="team-info__text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
-              quas voluptate magni repellat eligendi! Inventore voluptas
-              voluptates quia voluptatum expedita, ducimus delectus dolore eaque
-              maiores iusto modi eum aut corporis?
-            </p>
-          </article>
-
-          <article class="team-info">
-            <img
-              class="team-info__imagen"
-              src="http://placeimg.com/100/200/nature"
-              alt=""
-            />
-            <h2 class="team-info__title">Integrante 3</h2>
-            <p class="team-info__text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
-              quas voluptate magni repellat eligendi! Inventore voluptas
-              voluptates quia voluptatum expedita, ducimus delectus dolore eaque
-              maiores iusto modi eum aut corporis?
-            </p>
-          </article>
-
-          <article class="team-info">
-            <img
-              class="team-info__imagen"
-              src="http://placeimg.com/100/200/arch"
-              alt=""
-            />
-            <h2 class="team-info__title">Integrante 4</h2>
-            <p class="team-info__text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
-              quas voluptate magni repellat eligendi! Inventore voluptas
-              voluptates quia voluptatum expedita, ducimus delectus dolore eaque
-              maiores iusto modi eum aut corporis?
-            </p>
-          </article>
-        </section>
-        <!-- fin sección de equipo -->
-      </div>
-    </main>
-  </div>
+<!--   </div> -->
 </template>
 
 <script>
@@ -328,7 +307,7 @@ export default {
               padding: 20px;
               text-align: center;
           }
-  
+  /* 
           .news-info {
               width: 50%;
               padding: 20px;
@@ -337,9 +316,8 @@ export default {
           .news-header {
               display: flex;
               justify-content: space-around;
-     
-              
-          }
+      
+          } */
   
           .news-info__title {
               align-self: center;

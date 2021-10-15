@@ -67,14 +67,14 @@ export default {
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (max-width: 576px) { 
   #lateral{
      display: none !important;
      }
  }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
     #lateral{
      display: none !important;
      }

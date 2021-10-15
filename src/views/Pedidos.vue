@@ -1,13 +1,73 @@
 <template>
     <!-- Aqui va codigo HTML -->
     <div>
+        
+        <h1>Pedidos</h1>
+
+       <div id="formulario">
+           
+
+           <span class="border border-dark">
+       <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Codigo:</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar codigo...">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Cantidad:</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Ingresar cantidad...">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Nombre del producto:</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ingresar nombre del producto...">
+          </div>
+      
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        </span>
+        </div>
+
         <div>
+        <table style="width:70%">
+            <caption>Productos</caption>
+            <tr>
+               <!--  <th scope="col">{{item.ID}}</th>
+                <th>{{item.Referenciapedido}}</th>
+                <th>{{item.Codigo}}</th>
+                <th>{{item.Cantidad}}</th>
+                <th>{{item.Nombredelproducto}}</th> -->
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+        </table> 
+    </div>
             <table style="width:70%">
                 <caption>VIVERES</caption>
                 <tr>
-                    <th>Producto</th>
-                    <th>Unidades</th>
-                    <th>Cantidad</th>
+              <!--       <th>{{item.Producto}}</th>
+                    <th>{{item.Unidades}}</th>
+                    <th>{{item.Cantidad}}</th> -->
                 </tr>
                 <tr>
                     <td>Atun </td>
@@ -32,9 +92,9 @@
             <table style="width:70%">
                 <caption>BEBIDAS</caption>
                 <tr>
-                    <th>Producto</th>
-                    <th>Unidades</th>
-                    <th>Cantidad</th>
+                   <!--  <th>{{item.Producto}}</th>
+                    <th>{{item.Unidades}}</th>
+                    <th>{{item.Cantidad}}</th> -->
                 </tr>
                 <tr>
                     <td>Gaseosa</td>
@@ -59,9 +119,9 @@
         <table style="width:70%">
             <caption>FRUTAS Y VERDURAS</caption>
             <tr>
-                <th>Producto</th>
-                <th>Unidades</th>
-                <th>Cantidad</th>
+               <!--  <th>{{item.Producto}}</th>
+                <th>{{item.Unidades}}</th>
+                <th>{{item.Cantidad}}</th> -->
             </tr>
             <tr>
                 <td>Naranjas </td>
@@ -86,9 +146,9 @@
         <table style="width:70%">
             <caption>CONDIMENTOS</caption>
             <tr>
-                <th>Producto</th>
-                <th>Unidades</th>
-                <th>Cantidad</th>
+         <!--        <th>{{item.Producto}}</th>
+                <th>{{item.Unidades}}</th>
+                <th>{{item.Cantidad}}</th> -->
             </tr>
             <tr>
                 <td>Ajo en Polvo</td>
@@ -113,9 +173,9 @@
             <table style="width:70%">
                 <caption>ENLATADOS</caption>
                 <tr>
-                    <th>Producto</th>
-                    <th>Unidades</th>
-                    <th>Cantidad</th>
+                  <!--   <th>{{item.Producto}}</th>
+                    <th>{{item.Unidades}}</th>
+                    <th>{{item.Cantidad}}</th> -->
                 </tr>
                 <tr>
                     <td>Salchicha en Lata 80 Gramos </td>
@@ -140,9 +200,9 @@
                 <table style="width:70%">
                     <caption>GRANOS Y CEREALES</caption>
                     <tr>
-                        <th>Producto</th>
-                        <th>Unidades</th>
-                        <th>Cantidad</th>
+                  <!--       <th>{{item.Producto}}</th>
+                        <th>{{item.Unidades}}</th>
+                        <th>{{item.Cantidad}}</th> -->
                     </tr>
                     <tr>
                         <td>Lenteja por 250 gramos</td>
@@ -162,16 +222,42 @@
                     </tr>
                 </table>   
             </div>    
-            </div>
+            
             
     
 </template>
 
 <script>
 // import Vista from "./Vista.vue";
+//import Vista from "../components/Vista.vue";
+ import axios from "axios";
+
 export default {
-// /* <!-- Aqui van Scripts VueJS --> */
-}
+/*    data(){
+     return{
+        pedidos:[]
+        
+     }
+   },
+ 
+ created(){
+
+   this.listarPedidos();
+ },
+
+ methods:{
+   listarPedidos(){
+     this.axios.get('Pedidos')
+     .then((response)=>{
+        // console.log(response.data)
+        this.pedidos=response.data;
+     })
+     .catch(e=>{
+           console.log(e.response)
+     })
+   }
+ }
+ */} 
 </script>
 
 <style>
@@ -182,10 +268,20 @@ export default {
             border: 1px solid   black;
             border-collapse: collapse;
             border-spacing: 15px; 
+            margin-top: 30px;
             }
             th, td { 
             padding: 5px;
             text-align: center;
             } 
+
+            #formulario{
+            display:flex;
+            position: relative;
+            width: 70%;
+            
+            
+
+            }
         
 </style>

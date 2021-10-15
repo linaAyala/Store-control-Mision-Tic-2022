@@ -151,19 +151,19 @@
                                             <thead class="thead-light">
                                                 <tr>
 
-                                                    <th scope="col">Fecha de Ingreso</th>
+                                                    <!-- <th scope="col">{{item.FechadeIngreso}}</th>
 
-                                                    <th scope="col">Codigo</th>
+                                                    <th scope="col">{{item.Codigo}}</th>
 
-                                                    <th scope="col">Producto</th>
+                                                    <th scope="col">{{item.Producto}}</th>
 
-                                                    <th scope="col">Cantidad</th>
+                                                    <th scope="col">{{item.Cantidad}}</th>
 
-                                                    <th scope="col">P.unitario</th>
+                                                    <th scope="col">{{item.PUnitario}}</th>
 
-                                                    <th scope="col">Stock Minimo</th>
+                                                    <th scope="col">{{item.StockMinimo}}</th>
 
-                                                    <th scope="col">Fecha de Vencimiento</th>
+                                                    <th scope="col">{{item.FechadeVencimiento}}</th> -->
 
                                                 </tr>
                                             </thead>
@@ -179,7 +179,7 @@
 
                                                 <td>$24.000</td>
 
-                                                <td>$28.000</td>
+                                                <td>28</td>
 
                                                 <td>01/01/2022</td>
 
@@ -197,7 +197,7 @@
 
                                                 <td>$8.000</td>
 
-                                                <td>$10.500</td>
+                                                <td>10</td>
                                                 <td>27/02/2022</td>
                                             </tr>
                                             <tr>
@@ -206,7 +206,7 @@
                                                 <td>Sal refisal 3kg</td>
                                                 <td>3</td>
                                                 <td>$6.500</td>
-                                                <td>$7.300</td>
+                                                <td>7</td>
                                                 <td>25/10/2022</td>
                                             </tr>
                                         </table>
@@ -227,9 +227,36 @@
 
 <script>
 // import Vista from "./Vista.vue";
+// import Vista from "./Vista.vue";
+//import Vista from "../components/Vista.vue";
+/* import axios from "axios";
+
 export default {
-// /* <!-- Aqui van Scripts VueJS --> */
-}
+   data(){
+     return{
+        Stock:[]
+
+     }
+   },
+ 
+ created(){
+
+   this.listarStock();
+ },
+
+ methods:{
+   listarStock(){
+     this.axios.get('Stock')
+     .then((response)=>{
+        // console.log(response.data)
+        this.stock=response.data;
+     })
+     .catch(e=>{
+           console.log(e.response)
+     })
+   }
+ }
+} */
 </script>
 
 <style>

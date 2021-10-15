@@ -1,12 +1,13 @@
 <template>
-  <header class="header-section">
-      
-  </header>
+  
 </template>
 
 <script>
-export default {};
+export default {
+
+}
 </script>
 
 <style>
+
 </style>

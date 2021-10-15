@@ -32,7 +32,7 @@
               <a
                 class="nav-link"
                 href="#"
-                @click="irIniciarsesion()" 
+                @click="irLogin()" 
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
@@ -86,6 +86,7 @@
               <a
                 class="nav-link dropdown"
                 href="#"
+                 @click="irSeguimiento()"
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
@@ -126,6 +127,12 @@ export default {
     irInicio() {
       this.$router.push("/inicio");
     },
+    irSeguimiento() {
+      this.$router.push("/Seguimiento");
+    },
+    irLogin() {
+      this.$router.push("/Login");
+    },
   },
 }
 </script>
@@ -154,7 +161,7 @@ nav{
     border-radius:150px;
     border: 2px solid #666;
     cursor: pointer;
-    width: 72px;
-    height: 72px;
+    width: 50px;
+    height: 50px;
 }
 </style>

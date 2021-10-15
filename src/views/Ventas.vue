@@ -1,33 +1,72 @@
 <template>
-  <!-- Aqui va codigo HTML -->
-  <!--doctype html-->
-<div>
-  <h1 id="registrar" align="center">Registrar Las Ventas</h1>
 
-  <div class="contenedor">
-    <div class="espacio">
-      <button type="button" class="btn btn-primary btn-lg">
-        Ingresar producto vendido
-      </button>
+<h1 id="registrar" align="center">Registrar Las Ventas</h1>
+  <b-alert
+  :show="dismissCountDown"
+  dismissible
+  :variant="mensaje.color"
+  @dismissed="dismissCountDown=0"
+  @dismiss-count-down="countDownChanged">
+  {{mensaje.texto}}
+  </b-alert>
+
+  <form @submit.prevent="ingresarProd()">
+           <input type="text" class="form-control">
+           
+           <div id="formulario">
+        <!-- <span class="border border-dark">  -->
+        
+           <div class="form-group">
+            <label for="exampleInputEmail1">Fecha de ingreso:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="fechaIngreprod...">
+          </div>
+          <div class="form-group">
+           <label for="exampleInputPassword1">Cantidad:</label>
+           <input type="number" class="form-control" id="exampleInputPassword1" placeholder="cantidad...">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Nombre del producto:</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="nombreProducto..." v-model="venta.nombreProducto">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Codigo:</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="codigoProd..." v-model="venta.codigoProd">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Precio Unitario:</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="precioUnit..." v-model="venta.precioUnit">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Precio Total:</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="precioTotal..." v-model="venta.precioTotal">
+          </div>
+          <button class="btn btn-primary" type="submit">Ingresar Producto</button>
+          </div> 
+  </form>
+      
       <button type="button" class="btn btn-primary btn-lg">
         Eliminar producto
       </button>
-    </div>
 
+    <div>
     <table border="1">
-      <tr>
-        <th scope="col">Fecha</th>
+      <tr v-for="(item, index) in ventas" :key="index">
 
-        <th>Codigo</th>
+        <th scope="col">{{item.Fecha}}</th>
 
-        <th>Producto</th>
+        <th>{{item.Codigo}}</th>
 
-        <th>Cantidad</th>
+        <th>{{item.Producto}}</th>
 
-        <th>P.unitario</th>
+        <th>{{item.Cantidad}}</th>
 
-        <th>P.Total</th>
+        <th>{{item.P.unitario}}</th>
+
+        <th>{{item.P.Total}}</th>
+      
+        <th>{{item.descuento}}</th>   
       </tr>
+
 
       <tr>
         <td>02/04/2021</td>
@@ -41,6 +80,9 @@
         <td>$24.000</td>
 
         <td>$28.000</td>
+
+        <td>5%</td>
+
       </tr>
 
       <tr>
@@ -55,6 +97,9 @@
         <td>$8.000</td>
 
         <td>$10.500</td>
+
+        <td>8%</td>
+
       </tr>
 
       <tr>
@@ -69,9 +114,15 @@
         <td>$6.500</td>
 
         <td>$7.300</td>
+
+        <td>3%</td>
+
       </tr>
     </table>
   </div>
+
+    <b-button @click="eliminarVenta()">eliminarVenta(item.Codigo)</b-button>
+    <b-button @click="activarEdicion()">editar()</b-button>
 
   <div class="contenedor">
     <h1 align="center">Stock Actual</h1>
@@ -87,13 +138,13 @@
 
     <table border="1">
       <tr>
-        <th scope="col">Producto</th>
+    <!--     <th scope="col">{{item.Producto}}</th>
 
-        <th>Stock de Seguridad</th>
+        <th>{{item.StockdeSeguridad}}</th>
 
-        <th>Stock Actual</th>
+        <th>{{item.StockActual}}</th>
 
-        <th>Precio Promedio</th>
+        <th>{{item.PrecioPromedio}}</th> -->
       </tr>
 
       <tr>
@@ -127,18 +178,95 @@
       </tr>
     </table>
   </div>
-  </div>
+
 </template>
 
 <script>
 //import Vista from "../components/Vista.vue";
+import vueaxios from 'vue-axios'
+import axios from 'axios'
+vue.use (axios, vueaxios);
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 export default {
-  // /* <!-- Aqui van Scripts VueJS --> */
-  
- }; 
+   data(){
+     return{
+        ventas:[],
+        mensaje:{color: 'success', texto:''},
+        dismissSecs: 5,
+        dismissCountDown: 0,
 
+        venta:{fechaIngreprod:"",cantidad:"", nombreProducto:"", codigoProd:"", precioUnit:"", precioTotal:""}
+
+     }
+   },
+ 
+ created(){
+
+   this.listarVentas();
+ },
+
+ methods:{
+   listarVentas(){
+     this.axios.get('/api/venta/todas')
+     .then((response)=>{
+        console.log(response.data)
+        this.ventas=response.data;
+     })
+     .catch(e=>{
+           console.log(e.response)
+     })
+   },
+   Ingresarprod(){
+
+     this.axios.post('/api/venta/nueva',this.ventas)
+     .then(res=>{
+         
+        this.ventas.push(res.data);
+        this.venta.fechaIngreprod="";
+        this.venta.cantidad="";
+        this.venta.nombreProducto="";
+        this.venta.codigoProd="";
+        this.ventas.precioUnit="";
+        this.ventas.precioTotal="";
+        this.mensaje.color="success";
+        this.mensaje.texto="Venta Agregada";
+        this.showAlert();
+
+
+     })
+     .catch(e=>{
+       console.log(e.response);
+     })
+
+   },
+   eliminarVenta(codigo){
+     this.axios.delete(`/venta/${codigo}`)
+     .then(res=>{
+      const index =this.ventas.findIndex(item=> item_codigo===res.data._codigo)
+      this.ventas.splice(index, 1);
+      this.mensaje.color="success";
+      this.mensaje.texto="Venta Eliminada";
+      this.showAlert();
+
+
+     })
+     .catch(e=>{
+      console.log(e.response);
+
+     })
+ },
+   countDownChanged(dismissCountDown){
+     this.dismissCountDown = dismissCountDown
+   },
+   showAlert(){
+     this.dismissCountDown= this.dismissSecs
+   }
+ }
+} 
 </script>
-
+ 
 <style>
 /* <!-- Aqui va CSS --> */
 .contenedor {
@@ -158,7 +286,14 @@ button {
 
 #registrar {
   position: relative;
-  right: 237px;
-  top: 40px;
+  left: 50px;
+  top: 5px;
+  
 }
+ #formulario{
+            display:flex;
+            position: relative;
+            width: 70%;
+            left: 100px;
+            }
 </style>
