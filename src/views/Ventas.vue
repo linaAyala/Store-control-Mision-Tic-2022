@@ -183,11 +183,11 @@
 
 <script>
 //import Vista from "../components/Vista.vue";
-import vueaxios from 'vue-axios'
+/* import vueaxios from 'vue-axios'
 import axios from 'axios'
 vue.use (axios, vueaxios);
 import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css' */
 
 export default {
    data(){
